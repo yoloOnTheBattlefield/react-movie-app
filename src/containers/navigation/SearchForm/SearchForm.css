@@ -27,6 +27,7 @@
 .react-autosuggest__input--focused {
   width: 300px;
   background: rgba(0,0,0,0.9);
+  border-color: #D33E43;
   outline: none;
   transition: 0.2s;
 }

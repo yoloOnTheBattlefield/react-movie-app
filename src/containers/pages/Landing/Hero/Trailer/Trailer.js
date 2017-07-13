@@ -17,21 +17,21 @@ class Trailer extends React.Component{
     if(!trailers.results){
       return null
     }
-    console.log(trailers.results[0].key)
     return (
         <TrailerItem>
-        <iframe
-            src={`https://www.youtube.com/embed/${trailers.results[0].key}?ecver=2`}
-            title={trailers.results[0].key}
-            style={{
-              position: 'relative',
-              left: 0,
-              width: 400,
-              height: '40vh'
-            }}
-            frameBorder="0"
-            allowFullScreen
-        />
+          <iframe
+              src={`https://www.youtube.com/embed/${trailers.results[0].key}?ecver=2`}
+              title={trailers.results[0].key}
+              style={{
+                position: 'relative',
+                left: 0,
+                width: 400,
+                height: '40vh'
+              }}
+              frameBorder="0"
+              allowFullScreen
+          />
+
         </TrailerItem>
     )
   }
