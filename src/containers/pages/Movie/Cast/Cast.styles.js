@@ -4,7 +4,7 @@ import { gradientRed } from '../../../theme/colors';
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
   justify-content: space-around;
   position: relative;

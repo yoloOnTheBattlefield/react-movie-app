@@ -36,7 +36,7 @@ export const Overlay = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(to top, rgba(23, 29, 33, 1) 0%, rgba(23, 29, 33, 0.9) 15%, rgba(23, 29, 33, 0.7) 33.3%,  rgba(86, 90, 93, 0.3) 100%);
+  background: linear-gradient(rgba(23, 29, 33, 1) 0%, rgba(23, 29, 33, 0.9) 15%, rgba(23, 29, 33, 0.7) 33.3%,  rgba(86, 90, 93, 0.3) 90%, rgba(0,0,0,0.8) 100%);
 `;
 
 export const HeroWrapper = styled.div`
