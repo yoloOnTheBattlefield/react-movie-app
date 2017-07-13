@@ -10,6 +10,7 @@ import {
 import SideBar from './SideBar';
 
 export default ({ movie }) => {
+  console.log(movie)
   return (
     <Container>
       <Info>

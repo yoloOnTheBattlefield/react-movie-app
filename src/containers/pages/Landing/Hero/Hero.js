@@ -1,47 +1,53 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
+import { Parallax } from 'react-parallax';
+import Trailer from './Trailer/Trailer';
 import {
   Hero,
-  Backdrop,
   Overlay,
+  ParalalxWrapper,
+  ParallaxInner,
+  TrailerWrapper,
+  TrailerTitle,
+  Upcoming,
+  Scroll,
+  Line
 } from './Hero.styles';
 
-export default ({ movie, landing, hero }) => {
-  if(!movie){
-    return null
+export default class extends React.Component{
+  render(){
+    const { movie } = this.props;
+    if(!movie){
+      return null
+    }
+    const {
+      poster_path,
+      id,
+      title
+    } = movie;
+    return (
+      <Hero>
+          {/*<Backdrop
+            backdrop={`https://image.tmdb.org/t/p/w1000${backdrop_path}`}  />*/}
+          <Overlay />
+          <Link to={`/movie/${id}`}>
+            <ParalalxWrapper>
+              <Upcoming><h1><span>Featured Movie</span></h1></Upcoming>
+              <Parallax
+                strength={200}
+                bgImage={`https://image.tmdb.org/t/p/w1000${poster_path}`}>
+                <TrailerTitle><h1>{title}</h1></TrailerTitle>
+                <ParallaxInner/>
+              </Parallax>
+            </ParalalxWrapper>
+          </Link>
+          <TrailerWrapper>
+            <Trailer movieId={id} />
+            <Scroll>
+              <Line />
+            </Scroll>
+          </TrailerWrapper>
+      </Hero>
+    )
   }
-  const {
-    backdrop_path,
-  } = movie;
-  return (
-    <Hero landing={landing}>
-        <Backdrop
-          backdrop={`https://image.tmdb.org/t/p/w1000${backdrop_path}`}  />
-        <Overlay />
-        {/*<MovieWrapper>
-          <Poster
-            poster={`https://image.tmdb.org/t/p/w500${poster_path}`}
-            landing={landing}
-            hero={hero}/>
-          <MovieDescription>
-            <Heading
-              landing={landing}
-              small
-            >
-              Featured Movie
-            </Heading>
-            <Heading>{title}</Heading>
-            <Overview>{tagline ? tagline : overview}</Overview>
-              {
-                landing ?
-                <Link to={`/movie/${id}`}>
-                  <Button>
-                  {title}
-                  </Button>
-                </Link> : null
-              }
-
-          </MovieDescription>
-        </MovieWrapper>*/}
-    </Hero>
-  )
 }

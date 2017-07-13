@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import {
   gradientRed
 } from '../../../theme/colors'
@@ -11,18 +11,7 @@ import {
 export const Hero = styled.div`
   width: 100vw;
   height: 100vh;
-`;
-
-export const Backdrop = styled.div`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url(${props => props.backdrop});
-  background-size: cover;
-  background-position: 50%;
-  filter: brightness(120%) grayscale(1);
+  position: relative;
 `;
 
 export const Overlay = styled.div`
@@ -31,82 +20,97 @@ export const Overlay = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(rgba(23, 29, 33, 1) 0%, rgba(23, 29, 33, 0.9) 15%, rgba(23, 29, 33, 0.7) 33.3%,  rgba(86, 90, 93, 0.3) 90%, #111 100%);
+  background: linear-gradient(rgba(23, 29, 33, 1) 0%, rgba(23, 29, 33, 0.9) 15%, rgba(23, 29, 33, 0.7) 33.3%,  rgba(23, 29, 33, 0.3) 90%, #111 100%);
 `;
 
-export const MovieWrapper = styled.div`
-  width: 80%;
-  max-width: 800px;
-  height: 450px;
+export const ParalalxWrapper = styled.div`
+  display: none;
+  position: relative;
+  @media (max-width: ${phone}px){
+    display: block;
+  }
+`;
+
+export const ParallaxInner = styled.div`
+  width: 100vw;
+  height: 50vh;
+  background: linear-gradient(rgba(23, 29, 33, 0) 0%, rgba(23, 29, 33, 0.2) 15%, rgba(23, 29, 33, 0.3) 33.3%,  rgba(23, 29, 33, 0.8) 90%, rgba(23, 29, 33, 1) 100%);
+`;
+
+export const TrailerWrapper = styled.div`
+  height: 50vh;
+  width: 100vw;
+  position: relative;
+`;
+
+export const TrailerTitle = styled.div`
+  width: 100vw;
+  height: 60px;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
-  display: flex;
-  justify-content: space-between;
-  @media (max-width: ${tablet}px){
-    width: 90%;
-    justify-content: center;
-    align-items: center;
-  }
-`;
-
-
-export const MovieDescription = styled.div`
-  width: calc(100% - 300px);
-  height: 100%;
-  padding-left: 20px;
-  @media (max-width: ${tablet}px){
-    height: auto;
-    padding: 0;
-    position: absolute;
-    width: 100vh;
-    text-align: center;
-
-    transform: translatex(28%);
-  }
-`;
-
-export const Heading = styled.h1`
-  font-size: ${props => props.small ? '15px' : '30px'};
-  font-weight: ${props => props.small ? '100' : '500'};
-  display: ${props => props.landing ? 'block' : 'none'};
-  color: white;
-  margin: 0;
-  padding-bottom: ${props => props.small ? '5px' : '20px'};
-  @media (max-width: ${tablet}px){
-    display: ${props => props.small ? 'none' : 'block'};
-    font-size: 30px;
-    font-weight: 300;
-    transform: rotate(90deg);
-  }
-`;
-
-export const Overview = styled.p`
-  font-size: 20px;
-  color: white;
-  margin: 0;
-  font-weight: 300;
-  margin: 15px auto;
-  line-height: 30px;
-  @media (max-width: ${tablet}px){
-    display: none;
-  }
-`;
-
-export const Rating = styled.div`
-  width: 35px;
-  height: 30px;
-  bottom: 0;
-  position: absolute;
-  h2{
+  padding: 10px;
+  text-shadow: 10px 10px 10px rgba(157,108,210,0.2);
+  text-align: center;
+  z-index: 5;
+  h1{
     background: ${gradientRed};
+    font-size: 35px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  @media (max-width: ${tablet}px){
-    display: none;
+`;
+
+export const Upcoming = styled.div`
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  left: 10px;
+  color: white;
+  h1 span{
+    padding: 0 5px;
+    width: auto;
+    background: rgba(0,0,0,0.5);
+    margin: 0;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 25px;
   }
 `;
+
+export const Scroll = styled.div`
+  width: 100vw;
+  height: 10vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  position: absolute;
+`;
+
+const animation = keyframes`
+	from {
+		transform: translatey(-100%);
+	}
+
+	to {
+		transform: translatey(100%);
+    opacity: 0;
+	}
+`;
+
+export const Line = styled.div`
+  width: 1px;
+  height: 100px;
+  background: rgba(255,255,255, 08);
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: ${animation} 2s ease-in-out infinite;
+`

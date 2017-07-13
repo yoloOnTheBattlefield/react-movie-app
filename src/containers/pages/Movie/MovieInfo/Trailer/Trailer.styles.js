@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 import { tablet } from '../../../../theme/sizes';
 
 export const TrailersContainer = styled.div`
@@ -10,7 +10,6 @@ export const TrailersContainer = styled.div`
   @media (max-width: ${tablet}px){
     width: 100%;
   }
-
 `;
 
 export const TrailerItem = styled.div`

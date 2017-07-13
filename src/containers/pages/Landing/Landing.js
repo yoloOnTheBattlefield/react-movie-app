@@ -14,7 +14,9 @@ class Landing extends React.Component{
 
   render(){
     const collections = _values(this.props.collections);
-    const showcasedMovie = collections[0].results[0];
+
+    const randomMovie = Math.floor((Math.random() * collections[0].results.length) + 1);
+    const showcasedMovie = collections[0].results[randomMovie];
     return(
       <div>
         <Hero movie={showcasedMovie} />
