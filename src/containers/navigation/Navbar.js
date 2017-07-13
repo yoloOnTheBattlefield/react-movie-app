@@ -7,10 +7,9 @@ import reactLogo from '../../assets/images/react-logo.svg'
 import {
   Nav,
   NavInner,
-  Button,
-  Third,
-  MenuPanel,
-  MenuList
+  FakeThird,
+  Logo,
+  InputContainer
 } from './Navbar.styles';
 
 class Navbar extends React.Component{
@@ -19,7 +18,7 @@ class Navbar extends React.Component{
       <Headroom style={{zIndex: 100}}>
         <Nav>
           <NavInner>
-            <Third>
+            <Logo>
               <Link to='/'>
                 <ReactSVG
                   path={reactLogo}
@@ -29,12 +28,12 @@ class Navbar extends React.Component{
                     height: 40
                   }}
                 />
-              </Link>
-            </Third>
-            <Third>
+            </Link>
+            </Logo>
+            <InputContainer>
               <SearchForm />
-            </Third>
-            <Third />
+            </InputContainer>
+            <FakeThird />
           </NavInner>
         </Nav>
       </Headroom>
