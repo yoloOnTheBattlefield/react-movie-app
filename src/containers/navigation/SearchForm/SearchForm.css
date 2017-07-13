@@ -72,7 +72,7 @@
     width: 100%;
   }
   .react-autosuggest__input{
-    width: 100%;
+    width: 95%;
     height: 35px;
   }
   .react-autosuggest__input--focused{
