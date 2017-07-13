@@ -9,6 +9,7 @@
     "react-dom": "^15.6.1",
     "react-fontawesome": "^1.6.1",
     "react-headroom": "^2.1.6",
+    "react-height": "^3.0.0",
     "react-parallax": "^1.4.4",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.1",

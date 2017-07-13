@@ -5110,6 +5110,12 @@ react-headroom@^2.1.6:
     raf "^3.3.0"
     shallowequal "^0.2.2"
 
+react-height@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-height/-/react-height-3.0.0.tgz#fae322f9da64d3e9e25536f26b77c73954261524"
+  dependencies:
+    prop-types "15.5.8"
+
 react-parallax@^1.4.4:
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/react-parallax/-/react-parallax-1.4.4.tgz#4772042ca8bab2c0535e67c56a516a4e2abb34f0"
