@@ -1,23 +1,16 @@
 import styled from 'styled-components';
 import {
   gradientRed
-} from '../theme/colors'
+} from '../../../theme/colors'
 import {
   phone,
   tablet
-} from '../theme/sizes';
+} from '../../../theme/sizes';
 
-const heroHeight = '100vh';
 
 export const Hero = styled.div`
   width: 100vw;
   height: 100vh;
-  @media (max-width: ${tablet}px){
-    height: ${heroHeight};
-  }
-  @media (max-width: ${phone}px){
-    display: ${props => props.landing ? 'none' : 'block'}
-  }
 `;
 
 export const Backdrop = styled.div`
@@ -30,9 +23,6 @@ export const Backdrop = styled.div`
   background-size: cover;
   background-position: 50%;
   filter: brightness(120%) grayscale(1);
-  @media (max-width: ${tablet}px){
-    height: ${heroHeight};
-  }
 `;
 
 export const Overlay = styled.div`
@@ -41,11 +31,7 @@ export const Overlay = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  background-image: radial-gradient(at 10% 30%, #1e272c 0%, #445761 100%);
-  opacity: 0.8;
-  @media (max-width: ${tablet}px){
-    height: ${heroHeight};
-  }
+  background: linear-gradient(to top, rgba(23, 29, 33, 1) 0%, rgba(23, 29, 33, 0.9) 15%, rgba(23, 29, 33, 0.7) 33.3%,  rgba(86, 90, 93, 0.3) 100%);
 `;
 
 export const MovieWrapper = styled.div`

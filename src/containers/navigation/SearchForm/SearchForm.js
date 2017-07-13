@@ -18,13 +18,12 @@ class SearchForm extends React.Component{
       switch (mediaType) {
         case 'movie':
           return this.props.history.push(`/movie/${id}`);
-          break;
         case 'tv':
           return this.props.history.push(`/tv/${id}`);
-          break;
         case 'person':
           return this.props.history.push(`/actor/${id}`);
-          break;
+        default:
+          return null;
       }
     }
 
@@ -33,14 +32,13 @@ class SearchForm extends React.Component{
       const mediaType = suggestion.media_type;
       switch (mediaType) {
         case 'movie':
-          return suggestion.original_title
-          break;
+          return suggestion.original_title;
         case 'tv':
-          return suggestion.name
-          break;
+          return suggestion.name;
         case 'person':
-          return suggestion.name
-          break;
+          return suggestion.name;
+        default:
+          return null;
       }
     }
 
@@ -49,14 +47,13 @@ class SearchForm extends React.Component{
       const mediaType = suggestion.media_type;
       switch (mediaType) {
         case 'movie':
-          return <span>{suggestion.original_title} {suggestion.release_date.slice(0,4)}</span>
-          break;
+          return <span>{suggestion.original_title} {suggestion.release_date.slice(0,4)} MOVIE</span>
         case 'tv':
-          return <span>{suggestion.name}</span>
-          break;
+          return <span>{suggestion.name} SERIES</span>
         case 'person':
-          return <span>{suggestion.name}</span>
-          break;
+          return <span>{suggestion.name} ACTOR</span>
+        default:
+          return null
       }
     }
 

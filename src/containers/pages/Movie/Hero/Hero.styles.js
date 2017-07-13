@@ -15,6 +15,7 @@ export const Hero = styled.div`
   box-shadow: 0px 50px 100px rgba(0,0,0,0.8);
   overflow: hidden;
   margin-bottom: 150px;
+  position: relative;
 `;
 
 export const Backdrop = styled.div`

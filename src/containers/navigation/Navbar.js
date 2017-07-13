@@ -1,7 +1,6 @@
 import React from 'react';
 import Headroom from 'react-headroom';
 import ReactSVG from 'react-svg';
-import { Link } from 'react-router-dom';
 import SearchForm from './SearchForm/SearchForm';
 import reactLogo from '../../assets/images/react-logo.svg'
 import {
@@ -9,6 +8,7 @@ import {
   NavInner,
   FakeThird,
   Logo,
+  StyledLink,
   InputContainer
 } from './Navbar.styles';
 
@@ -19,16 +19,18 @@ class Navbar extends React.Component{
         <Nav>
           <NavInner>
             <Logo>
-              <Link to='/'>
+              <StyledLink to='/'>
                 <ReactSVG
                   path={reactLogo}
                   callback={svg => console.log(svg)}
                   style={{
                     width: 40,
-                    height: 40
+                    height: 40,
+                    marginRight: 10
                   }}
                 />
-            </Link>
+                Browse
+              </StyledLink>
             </Logo>
             <InputContainer>
               <SearchForm />

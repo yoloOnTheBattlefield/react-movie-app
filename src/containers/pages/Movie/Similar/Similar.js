@@ -7,7 +7,6 @@ import {
   Container,
   ScrollContainer,
   Card,
-  Name,
   Title
 } from './Similar.styles.js';
 

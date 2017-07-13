@@ -64,7 +64,6 @@ export const Card = styled.div`
   }
   &:hover:before{
     transform: scale(1);
-
   }
 `;
 

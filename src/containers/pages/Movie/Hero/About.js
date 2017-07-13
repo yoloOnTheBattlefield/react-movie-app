@@ -1,10 +1,10 @@
 import React from 'react';
-import FontAwesome from 'react-fontawesome'
+import { Rating } from 'semantic-ui-react'
 import {
   About,
   Poster,
   Text,
-  Rating
+  RatingContainer
 } from './About.styles';
 
 export default ({ movie }) => {
@@ -23,16 +23,14 @@ export default ({ movie }) => {
       <Text>
         {overview ? overview : ''}
       </Text>
-      <Rating>
+      <RatingContainer>
         <div>
-          <h4>Vote Average</h4>
-          <h5>{vote_average} <FontAwesome name='star' /></h5>
+          <h2>{vote_average} <Rating icon='star' defaultRating={1} disabled /></h2>
         </div>
         <div>
-          <h4>Vote Count</h4>
-          <h5>{vote_count} <FontAwesome name='user-circle' /></h5>
+          <h2>{vote_count} <Rating icon='heart' defaultRating={1} disabled /></h2>
         </div>
-      </Rating>
+      </RatingContainer>
     </About>
   )
 }

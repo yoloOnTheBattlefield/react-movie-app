@@ -4,7 +4,6 @@ import {
   Container,
   Info,
   Title,
-  SubTitle,
   Overview
 } from './MovieInfo.styles';
 

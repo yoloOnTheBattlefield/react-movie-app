@@ -1,35 +1,10 @@
 import React from 'react';
-import Waypoint from 'react-waypoint';
-import { ReactHeight } from 'react-height';
 import { connect } from 'react-redux';
 import { getActorById, getActorImages } from './actions';
 import { Loader } from 'semantic-ui-react';
 import Hero from './Hero/Hero';
 
 class Actor extends React.Component{
-
-  constructor(props){
-    super(props);
-    this.state = {
-      fixed: true
-    }
-  }
-
-  //
-  _handleWaypointEnter = () => {
-    console.log('enter')
-    this.setState({
-      fixed: true,
-    })
-  }
-
-   _handleWaypointLeave = () => {
-     this.setState({
-       fixed: false
-     })
-  }
-  //
-
   componentWillMount(){
     this.props.getActorById(this.props.match.params.id);
     this.props.getActorImages(this.props.match.params.id);
@@ -53,20 +28,6 @@ class Actor extends React.Component{
           backdrop={actor.profile_path}
           fixed={this.state.fixed}
         />
-        {/*<div
-          style={{
-            width: '100vw',
-            height: '500vh',
-            background: '#276109',
-            position: 'absolute',
-            top: this.state.height
-          }}
-        >
-          <Waypoint
-            onEnter={this._handleWaypointEnter}
-            onLeave={this._handleWaypointLeave}
-          />
-        </div>*/}
       </div>
     )
   }

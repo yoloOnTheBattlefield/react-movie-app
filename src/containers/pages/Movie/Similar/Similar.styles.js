@@ -68,14 +68,3 @@ export const Card = styled.div`
 
   }
 `;
-
-export const Name = styled.div`
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background: rgba(0,0,0,0.5);
-  padding: 10px 0;
-  text-align: center;
-  color: white;
-`;

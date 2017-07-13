@@ -30,34 +30,13 @@ export const Text = styled.div`
   overflow-x: scroll;
 `;
 
-export const Rating = Poster.extend`
+export const RatingContainer = Poster.extend`
   height: 180px;
   margin: auto;
   box-sizing: border-box;
   border-left: 1px solid rgba(255,255,255,0.3);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  div{
-    padding: 0;
-    padding-left: 25px;
-    flex: 1;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    h5 span{
-      margin-left: 5px;
-    }
-    h4{
-      paddin-bottom: 10px;
-    }
-    h4, h5{
-      margin: 0;
-      box-sizing: border-box;
-    }
-  }
-  div:first-of-type{
-    border-bottom: 1px solid rgba(255,255,255,0.3);
-  }
+  justify-content: space-around;
+
 `;

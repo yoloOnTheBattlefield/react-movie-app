@@ -1,10 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchUpcomingMovies, fetchTheaterMovies } from './actions';
-
 import _values from 'lodash/values';
-
-import Hero from '../../components/Hero';
+import Hero from './Hero/Hero';
 import MoviesContainer from './FetchContainer/MoviesContainer';
 
 class Landing extends React.Component{
@@ -19,7 +17,7 @@ class Landing extends React.Component{
     const showcasedMovie = collections[0].results[0];
     return(
       <div>
-        <Hero movie={showcasedMovie} landing hero />
+        <Hero movie={showcasedMovie} />
         <MoviesContainer collections={collections} />
       </div>
     )

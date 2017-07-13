@@ -44,11 +44,11 @@ export const ContainerInner = styled.div`
     margin-right: 20px;
     color: white;
     font-size: 18px;
-    color: rgba(255,255,255, 0.8);
+    color: rgba(255,255,255, 1);
   }
   div span{
     padding-right: 10px;
     font-size: 15px;
-    color: rgba(255,255,255, 1);
+    color: rgba(255,255,255, 0.8);
   }
 `;

@@ -53,6 +53,19 @@
   list-style-type: none;
 }
 
+@media only screen and (max-width: 768px){
+  .react-autosuggest__container{
+    width: 80%;
+    margin: 0 auto;
+  }
+  .react-autosuggest__input{
+    width: 100%;
+  }
+  .react-autosuggest__input--focused{
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 410px) {
   .react-autosuggest__container{
     width: 100%;
