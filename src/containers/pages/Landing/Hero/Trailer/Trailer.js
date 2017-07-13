@@ -25,8 +25,8 @@ class Trailer extends React.Component{
               style={{
                 position: 'relative',
                 left: 0,
-                width: '100vw',
-                height: '40vh'
+                width: '100%',
+                height: '100%'
               }}
               frameBorder="0"
               allowFullScreen

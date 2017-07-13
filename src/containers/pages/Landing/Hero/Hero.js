@@ -9,6 +9,9 @@ import {
   ParallaxInner,
   TrailerWrapper,
   TrailerTitle,
+  ActorWrapper,
+  ActorBlur,
+  Actor,
   Upcoming,
   Scroll,
   Line
@@ -40,6 +43,15 @@ export default class extends React.Component{
             </Parallax>
           </ParalalxWrapper>
         </Link>
+        <ActorWrapper>
+          <ActorBlur bgImage={`https://image.tmdb.org/t/p/w1000${poster_path}`} />
+          <Actor />
+          <Actor />
+          <Actor />
+          <Actor />
+          <Actor />
+          <Actor />
+        </ActorWrapper>
         <TrailerWrapper>
           <Trailer movieId={id} />
           <Scroll>
