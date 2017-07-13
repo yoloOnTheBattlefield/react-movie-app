@@ -1,18 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import Navbar from './containers/navigation/Navbar';
+import Landing from './containers/pages/Landing/Landing';
+import NotFound from './containers/pages/NotFound/NotFound';
+import Movie from './containers/pages/Movie/Movie';
+import Actor from './containers/pages/Actor/Actor.js'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Router>
+          <div>
+            <Navbar />
+            <Switch>
+              <Route exact path='/' component={Landing} />
+              <Route path='/movie/:id' component={Movie} />
+              <Route path='/actor/:id' component={Actor} />
+              <Route component={NotFound} />
+            </Switch>
+          </div>
+        </Router>
       </div>
     );
   }

@@ -1,0 +1,118 @@
+.react-autosuggest__container {
+  width: 300px;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.react-autosuggest__input {
+  width: 280px;
+  height: 37px;
+  margin: 0 auto;
+  background: transparent;
+  cursor: pointer;
+  color: white;
+  padding: 0 20px;
+  font-size: 20px;
+  text-align: left;
+  border: 2px solid #FF220C;
+  box-sizing: border-box;
+  border-radius: 35px;
+  transition: 0.2s;
+}
+
+.react-autosuggest__input--focused {
+  width: 300px;
+  background: rgba(0,0,0,0.9);
+  outline: none;
+  transition: 0.2s;
+}
+
+.react-autosuggest__suggestions-container {
+  display: none;
+}
+
+.react-autosuggest__suggestions-container--open {
+  display: block;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  z-index: 2;
+  background: black;
+}
+
+.react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/*@media only screen and (max-width: 768px){
+  .react-autosuggest__container{
+    width: 275px;
+  }
+  .react-autosuggest__input{
+    width: 100%;
+
+  }
+  .search{
+    left: 240px;
+  }
+}*/
+
+/*@media only screen and (max-width: 410px) {
+  .react-autosuggest__container{
+    width: 100%;
+  }
+  .react-autosuggest__input{
+    width: 80%;
+
+  }
+  .react-autosuggest__input--focused{
+  }
+  .react-autosuggest__suggestions-container--open {
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 80px;
+    background: black;
+    overflow-y: scroll;
+  }
+  .react-autosuggest__suggestions-list {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .search{
+    left: 70%;
+  }
+}*/
+
+
+.react-autosuggest__suggestion {
+  cursor: pointer;
+  padding: 10px 20px;
+  color: white;
+}
+
+.searchText {
+  display: inline-block;
+  padding-left: 5px;
+}
+
+.searchResult__name {
+  font-weight: bold;
+}
+
+.react-autosuggest__suggestion--highlighted {
+  background-color: rgba(33, 32, 37, 0.5);
+}
