@@ -22,7 +22,6 @@ class Navbar extends React.Component{
               <StyledLink to='/'>
                 <Svg
                   path={reactLogo}
-                  callback={svg => console.log(svg)}
                 />
                 Browse
               </StyledLink>

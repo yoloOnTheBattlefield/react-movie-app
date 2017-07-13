@@ -100,7 +100,7 @@ export const Scroll = styled.div`
     content: '';
     position: absolute;
     z-index: 5;
-    background: linear-gradient(#111 0%, transparent 10%, transparent 90%, #111 100%);
+    background: linear-gradient(#111 0%, transparent 10%, transparent 90%, rgb(17, 17, 17) 100%);
   }
 `;
 
