@@ -26,7 +26,6 @@ class Actor extends React.Component{
         <Hero
           actor={actor}
           backdrop={actor.profile_path}
-          fixed={this.state.fixed}
         />
       </div>
     )

@@ -60,33 +60,30 @@ export const ParallaxInner = styled.div`
 
 export const TrailerWrapper = styled.div`
   @media (max-width: ${tablet}px){
-    width: 40vw;
-    min-width: 360px;
-    height: 180px;
     position: absolute;
-    bottom: 0;
+    width: 40vw;
     right: 0;
+    left: 0;
+    bottom: 50px;
+    margin: auto;
+    z-index: 11;
+    box-shadow: 10px 10px 50px rgba(0,0,0,0.3);
   }
   @media (max-width: ${phone}px){
     width: 100vw;
     height: 50vh;
+    bottom: 0;
     position: relative;
   }
 `;
 
 export const TrailerTitle = styled.div`
-  width: 100vw;
-  height: 60px;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
   padding: 10px;
-  text-shadow: 10px 10px 10px rgba(157,108,210,0.2);
+  text-shadow: 0px 10px 10px rgba(157,108,210,0.2);
   text-align: center;
   z-index: 5;
+
   h1{
     background: ${gradientRed};
     -webkit-background-clip: text;
@@ -94,36 +91,49 @@ export const TrailerTitle = styled.div`
   }
   @media (max-width: ${tablet}px){
     width: 100%;
-    padding: 50px;
+    height: calc(100% - 205px);
+    padding: 0;
     h1{
-      font-size: 60px;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 40px;
+      line-height: 45px;
       letter-spacing: 2px;
       word-spacing: 5px;
-      transform: rotate(-90deg) translatey(-280%);
     }
+    display: ${props => props.mobile ? 'none' : 'block'};
   }
   @media (max-width: ${phone}px){
+    width: 100vw;
+    height: 60px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: rotate(0deg);
+    display: ${props => props.mobile ? 'block' : 'none'};
     h1{
       font-size: 35px;
-      transform: rotate(0deg) translatey(0);
-
+      letter-spacing: 0px;
+      word-spacing: 1px;
     }
   }
 `;
 
 export const ActorWrapper = styled.div`
-  width: 100vw;
-  max-width: 360px;
   height: calc(100vh - 180px);
   position: absolute;
   top: 0;
   right: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 100px;
-  overflow-y: scroll;
-  box-shadow: 4px 0px 80px rgba(0,0,0,0.8);
+  padding-top: 60px;
+  box-shadow: -10px 0px 80px rgba(0,0,0,0.8);
+  @media (max-width: ${tablet}px){
+    width: 90vw;
+  }
   @media (max-width: ${phone}px){
     display: none;
   }
@@ -135,27 +145,18 @@ export const ActorBlur = styled.div`
   height: 100%;
   top: 0;
   left: 0;
-  background: url(${props => props.bgImage});
-  background-position: top right;
-  filter: blur(5px);
+  background: rgba(0,0,0,0.2);
+  filter: blur(5px) grayscale(1);
   overflow: hidden;
-  opacity: 0.6;
+  opacity: 1;
 `;
 
-export const Actor = styled.div`
-  width: 100px;
-  height: 150px;
-  background: red;
-  margin: 5px;
-  z-index: 2;
-`;
 
 export const Upcoming = styled.div`
-  width: 100%;
-  height: 50px;
+
   position: absolute;
   z-index: 2;
-  left: 10px;
+
   color: white;
   h1 span{
     padding: 0 5px;
@@ -167,10 +168,17 @@ export const Upcoming = styled.div`
     line-height: 25px;
   }
   @media (max-width: ${tablet}px){
-    top: 60px;
+    width: 200px;
+    top: 150px;
+    left: -60px;
+    transform: rotate(-90deg);
   }
   @media (max-width: ${phone}px){
+    width: 100%;
+    height: 50px;
     top: 10px;
+    left: 10px;
+    transform: rotate(0deg);
   }
 `;
 

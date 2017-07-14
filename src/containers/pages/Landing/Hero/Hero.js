@@ -11,7 +11,6 @@ import {
   TrailerTitle,
   ActorWrapper,
   ActorBlur,
-  Actor,
   Upcoming,
   Scroll,
   Line
@@ -38,19 +37,16 @@ export default class extends React.Component{
               strength={200}
               bgImage={`https://image.tmdb.org/t/p/w1000${poster_path}`}
             >
-              <TrailerTitle><h1>{title}</h1></TrailerTitle>
+              <TrailerTitle mobile><h1>{title}</h1></TrailerTitle>
               <ParallaxInner/>
             </Parallax>
           </ParalalxWrapper>
         </Link>
         <ActorWrapper>
-          <ActorBlur bgImage={`https://image.tmdb.org/t/p/w1000${poster_path}`} />
-          <Actor />
-          <Actor />
-          <Actor />
-          <Actor />
-          <Actor />
-          <Actor />
+          <ActorBlur />
+          <div style={{width: '100%', height: '100px', zIndex: 2}}>
+            <TrailerTitle><h1>{title}</h1></TrailerTitle>
+          </div>
         </ActorWrapper>
         <TrailerWrapper>
           <Trailer movieId={id} />

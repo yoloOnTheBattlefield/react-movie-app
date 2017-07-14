@@ -67,7 +67,7 @@ class SearchForm extends React.Component{
       } = this.props;
 
       const inputProps = {
-        placeholder: "Type a movie name",
+        placeholder: "Search...",
         value,
         onChange
       };

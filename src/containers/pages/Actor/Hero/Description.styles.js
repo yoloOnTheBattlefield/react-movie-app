@@ -1,4 +1,8 @@
 import styled from 'styled-components';
+import {
+  phone,
+  tablet
+} from '../../../theme/sizes';
 
 const gold = '#E1CB96';
 
@@ -15,9 +19,13 @@ export const Information = styled.div`
 
 export const InformationWrapper = styled.div`
   margin: 10% auto;
-  width: 80%;
   display: flex;
   flex-direction: column;
+  @media (max-width: ${tablet}px){
+    width: 100%;
+    height: 100%;
+    margin-top: 60px;
+  }
 `;
 
 export const Name = styled.div`
@@ -31,6 +39,11 @@ export const Name = styled.div`
   word-wrap: wrap;
   span{
     color: white;
+  }
+  @media (max-width: ${tablet}px){
+    padding: 0;
+    margin: 0;
+    text-align: center;
   }
 `;
 

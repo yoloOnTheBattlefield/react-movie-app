@@ -33,7 +33,7 @@ const Third = styled.div`
 export const Logo = Third.extend`
   display: flex;
   @media (max-width: ${tablet}px){
-    width: 33.33%;
+    width: 50%;
   }
   @media (max-width: ${phone}px){
     width: 30%;
@@ -79,7 +79,7 @@ export const StyledLink = styled(Link)`
 
 export const InputContainer = Third.extend`
   @media (max-width: ${tablet}px){
-    width: 66.66%;
+    width: 50%;
   }
   @media (max-width: ${phone}px){
     width: 70%;

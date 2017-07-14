@@ -10,19 +10,22 @@ import {
 const heroHeight = '100vh';
 
 export const Hero = styled.div`
-  width: 100vw;
-  min-height: 100vh;
-  box-shadow: 0px 50px 100px rgba(0,0,0,0.8);
   position: relative;
+  width: 100vw;
+  box-shadow: 0px 50px 100px rgba(0,0,0,0.8);
+  @media (max-width: ${tablet}px){
+    height: calc(100vh - 60px);
+    margin-top: -60px;
+    padding-top: 60px;
+  }
 `;
 
 export const Actor = styled.div`
-  width: 40%;
-  height: 100vh;
-  position: ${props => props.fixed ? 'fixed' : 'absolute'};
-  top: ${props => props.fixed ? '0' : '100%'};
-
-  right: 0;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
   background: url(${props => props.poster});
   background-size: cover;
   background-position: 50%;
