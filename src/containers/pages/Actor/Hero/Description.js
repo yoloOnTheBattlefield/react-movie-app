@@ -13,16 +13,16 @@ export default class extends React.Component{
       return null;
     }
     return (
-      <Information>
-        <InformationWrapper>
+      <div>
+        <div>
           <div>
-            <Name>{actor.name ? actor.name.toUpperCase() : ''}</Name>
+            <div>{actor.name ? actor.name.toUpperCase() : ''}</div>
           </div>
-          <Biography>
+          <div>
             {actor.biography}
-          </Biography>
-        </InformationWrapper>
-      </Information>
+          </div>
+        </div>
+      </div>
     )
   }
 }

@@ -21,11 +21,8 @@ export const Hero = styled.div`
 `;
 
 export const Actor = styled.div`
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  width: 50vw;
+  height: 100vh;
   background: url(${props => props.poster});
   background-size: cover;
   background-position: 50%;

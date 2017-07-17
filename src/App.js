@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+import ScrollToTop from './ScrollToTop';
 import Navbar from './containers/navigation/Navbar';
 import Landing from './containers/pages/Landing/Landing';
 import NotFound from './containers/pages/NotFound/NotFound';
@@ -13,6 +13,7 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
+          <ScrollToTop>
           <div>
             <Navbar />
             <Switch>
@@ -21,7 +22,9 @@ class App extends Component {
               <Route path='/actor/:id' component={Actor} />
               <Route component={NotFound} />
             </Switch>
+
           </div>
+          </ScrollToTop>
         </Router>
       </div>
     );
