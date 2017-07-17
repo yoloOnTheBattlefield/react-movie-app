@@ -4,6 +4,7 @@ export const About = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+  align-items: center;
 `;
 
 export const Poster = styled.div`
@@ -13,13 +14,12 @@ export const Poster = styled.div`
   background-size: cover;
   background-position: 50%;
   position: relative;
-  box-shadow: ${props => props.shadow ? '0px 50px 50px rgba(0,0,0,0.8)' : ''};
+  box-shadow: 0px 50px 50px rgba(0,0,0,0.8);
 `;
 
 export const Text = styled.div`
-  width: calc(100% - 300px);
+  width: 75%;
   height: 180px;
-  margin: auto;
   padding: 0;
   color: white;
   font-weight: 300;
@@ -28,15 +28,4 @@ export const Text = styled.div`
   font-size: 20px;
   z-index: 2;
   overflow-x: scroll;
-`;
-
-export const RatingContainer = Poster.extend`
-  height: 180px;
-  margin: auto;
-  box-sizing: border-box;
-  border-left: 1px solid rgba(255,255,255,0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-
 `;

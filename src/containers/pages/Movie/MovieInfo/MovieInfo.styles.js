@@ -5,7 +5,8 @@ import { gradientRed } from '../../../theme/colors';
 export const Container = styled.div`
   width: 100%;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 10px auto;
+  padding: 0 20px;
   display: flex;
   justify-content: space-around;
   position: relative;
@@ -22,6 +23,7 @@ export const Info = styled.div`
   padding-right: 50px;
   @media (max-width: ${tablet}px){
     width: 100%;
+    padding: 0;
   }
 `;
 
@@ -30,7 +32,7 @@ export const Title = styled.div`
   z-index: 5;
   width: 100%;
   max-width: 900px;
-  height: 60px;
+  height: 100px;
   margin: 0 auto;
   padding-bottom: 25px;
   display: flex;
@@ -39,7 +41,7 @@ export const Title = styled.div`
   text-shadow: 10px 10px 10px rgba(157,108,210,0.2);
   h1{
     background: ${gradientRed};
-    font-size: 35px;
+    font-size: 30px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

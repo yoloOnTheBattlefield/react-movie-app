@@ -33,19 +33,19 @@ export default ({ movie }) => {
           }
         </ul>
         <h3>Budget</h3>
-        {
-          movie.budget ?
-            `${movie.budget} dollars`
-            :
-            'No information yet...'
-        }
+          {
+            movie.budget ?
+              `${movie.budget} dollars`
+              :
+              'No information yet...'
+          }
         <h3>Revenue</h3>
-        {
-          movie.revenue ?
-            `${movie.revenue} dollars`
-            :
-            'No information yet...'
-        }
+          {
+            movie.revenue ?
+              `${movie.revenue} dollars`
+              :
+              'No information yet...'
+          }
       </Content>
       <Content>
         <h3>Spoken Languages</h3>

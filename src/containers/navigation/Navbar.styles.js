@@ -18,6 +18,9 @@ export const NavInner = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: ${tablet}px){
+    max-width: 610px;
+  }
   @media (max-width: ${phone}px){
     width: 90%;
     margin: 0 auto;

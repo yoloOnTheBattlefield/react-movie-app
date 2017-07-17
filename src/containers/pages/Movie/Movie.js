@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { getMovieById } from './actions';
 import { Loader } from 'semantic-ui-react';
-import Hero from './Hero/Hero';
+import Hero from '../../components/Hero/Hero';
 import MovieInfo from './MovieInfo/MovieInfo';
 import Cast from './Cast/Cast';
 import Similar from './Similar/Similar';

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchUpcomingMovies, fetchTheaterMovies } from './actions';
 import _values from 'lodash/values';
-import Hero from './Hero/Hero';
+import Hero from '../../components/Hero/Hero';
 import MoviesContainer from './FetchContainer/MoviesContainer';
 
 class Landing extends React.Component{
@@ -19,7 +19,7 @@ class Landing extends React.Component{
     const showcasedMovie = collections[0].results[randomMovie];
     return(
       <div>
-        <Hero movie={showcasedMovie} />
+        <Hero movie={showcasedMovie} landing />
         <MoviesContainer collections={collections} />
       </div>
     )

@@ -6,6 +6,7 @@ export const Container = styled.div`
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
+  padding: 0 10px;
   justify-content: space-around;
   position: relative;
 `;
@@ -21,7 +22,7 @@ export const ScrollContainer = styled.div`
 export const Title = styled.div`
   z-index: 5;
   width: 100%;
-  height: 60px;
+  height: 80px;
   padding: 0px;
   display: flex;
   align-items: center;
@@ -38,7 +39,7 @@ export const Card = styled.div`
   width: 150px;
   height: 225px;
   position: relative;
-  margin: 5px;
+  margin: 0 5px;
   overflow: hidden;
   &:before{
     width: 100%;

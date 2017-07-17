@@ -10,11 +10,10 @@ import {
 import SideBar from './SideBar';
 
 export default ({ movie }) => {
-  console.log(movie)
   return (
     <Container>
       <Info>
-        <Title><h1>{movie.tagline ? movie.tagline.slice(0, 100) : movie.title}</h1></Title>
+        <Title><h1>{ movie.tagline ? movie.tagline.slice(0, 100) : ''}</h1></Title>
         <Overview>{movie.overview}</Overview>
         <Trailer movieId={movie.id} />
       </Info>

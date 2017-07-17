@@ -3,14 +3,16 @@ import { tablet } from '../../../theme/sizes';
 
 export const SideBar = styled.div`
   width: 25%;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   @media (max-width: ${tablet}px){
     width: 100%;
+    padding: 0;
+    margin: 0 auto;
     flex-direction: row;
-    padding-left: 50px;
     align-items: start;
   }
 `;

@@ -14,7 +14,7 @@ class Trailer extends React.Component{
   }
   render(){
     const { trailers } = this.props;
-    if(!trailers.results){
+    if(!trailers || !trailers.results || !trailers.results[0]){
       return null
     }
     return (

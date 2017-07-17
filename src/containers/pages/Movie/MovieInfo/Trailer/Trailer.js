@@ -19,7 +19,6 @@ class Trailer extends React.Component{
     }
     return (
       <div>
-        <h2>Trailers</h2>
         <TrailersContainer>
           {
             trailers.results ?
