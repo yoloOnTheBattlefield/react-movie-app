@@ -13,6 +13,9 @@ import {
 } from './Parallax.styles';
 
 export default ({ movie, large, landing }) => {
+  if(!movie.poster_path || !movie.backdrop_path){
+    return null;
+  }
   return (
     <ParalalxWrapper>
       {
@@ -23,7 +26,8 @@ export default ({ movie, large, landing }) => {
       }
       <Parallax
         strength={200}
-        bgImage={`https://image.tmdb.org/t/p/w1000${movie.poster_path}`}
+        bgImage={`https://image.tmdb.org/t/p/w1000${large ? movie.backdrop_path : movie.poster_path}`}
+        blur={ large ? '1' : '0' }
       >
         {
           !large ?
