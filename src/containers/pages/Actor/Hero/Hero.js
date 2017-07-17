@@ -1,23 +1,21 @@
 import React from 'react';
-import Description from './Description';
+import ActorInfo from './ActorInfo';
 import {
   Hero,
-  Actor,
+  Actor
 } from './Hero.styles';
 
 
-export default ({ actor, backdrop }) => {
-  if(!backdrop){
+export default ({ actor }) => {
+  if(!actor.profile_path){
     return null
   }
   return (
-    <div >
+    <Hero >
+      <ActorInfo actor={actor} />
       <Actor
-        poster={`https://image.tmdb.org/t/p/w1000${backdrop}`}
+        poster={`https://image.tmdb.org/t/p/w1000${actor.profile_path}`}
       />
-      <Description
-        actor={actor}
-      />
-  </div>
+    </Hero>
   )
 }

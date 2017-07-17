@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { phone, tablet } from '../../../theme/sizes';
+import { phone } from '../../../theme/sizes';
 
 export const Container = styled.div`
   width: 300px;
@@ -10,7 +10,6 @@ export const Container = styled.div`
     width: 100vw;
   }
 `;
-
 
 export const Title = styled.div`
   width: 100%;

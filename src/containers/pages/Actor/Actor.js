@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getActorById, getActorImages } from './actions';
 import { Loader } from 'semantic-ui-react';
 import Hero from './Hero/Hero';
+import Description from './Description';
 
 class Actor extends React.Component{
   componentWillMount(){
@@ -25,8 +26,8 @@ class Actor extends React.Component{
       <div style={{position: 'relative'}}>
         <Hero
           actor={actor}
-          backdrop={actor.profile_path}
         />
+        <Description actor={actor} />
       </div>
     )
   }

@@ -1,8 +1,6 @@
 import React from 'react';
 import {
-  Information,
   InformationWrapper,
-  Name,
   Biography
 } from './Description.styles'
 
@@ -12,17 +10,13 @@ export default class extends React.Component{
     if(!actor && !actor.name){
       return null;
     }
+    console.log(actor)
     return (
-      <div>
-        <div>
-          <div>
-            <div>{actor.name ? actor.name.toUpperCase() : ''}</div>
-          </div>
-          <div>
-            {actor.biography}
-          </div>
-        </div>
-      </div>
+      <InformationWrapper>
+        <Biography>
+          {actor.biography}
+        </Biography>
+      </InformationWrapper>
     )
   }
 }

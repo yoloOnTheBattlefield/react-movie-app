@@ -8,16 +8,15 @@ import {
 } from '../../../theme/sizes';
 
 const heroHeight = '100vh';
+const gold = '#E1CB96';
 
 export const Hero = styled.div`
   position: relative;
   width: 100vw;
+  margin-top: -60px;
   box-shadow: 0px 50px 100px rgba(0,0,0,0.8);
-  @media (max-width: ${tablet}px){
-    height: calc(100vh - 60px);
-    margin-top: -60px;
-    padding-top: 60px;
-  }
+  display: flex;
+  align-items: center;
 `;
 
 export const Actor = styled.div`

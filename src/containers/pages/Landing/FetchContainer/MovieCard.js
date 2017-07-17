@@ -3,7 +3,7 @@ import { Parallax } from 'react-parallax';
 import { Link } from 'react-router-dom';
 import {
   Container,
-  Title,
+  Title
 } from './MovieCard.styles';
 
 const MovieCard = ({ movie }) => {
