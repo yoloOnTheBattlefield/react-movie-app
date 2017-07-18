@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Parallax from './Parallax';
 import Trailer from './Trailer/Trailer';
 import {
   Hero,
@@ -8,7 +9,6 @@ import {
   Scroll,
   Line
 } from './Hero.styles';
-import Parallax from './Parallax';
 
 
 export default class extends React.Component{

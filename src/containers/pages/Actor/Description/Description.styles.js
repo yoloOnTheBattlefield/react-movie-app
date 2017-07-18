@@ -2,13 +2,15 @@ import styled from 'styled-components';
 import {
   phone,
   tablet
-} from '../../theme/sizes';
+} from '../../../theme/sizes';
 
 export const InformationWrapper = styled.div`
-  margin: 10% auto;
+  margin: 0 auto;
+  margin-top: 60px;
   width: 100%;
-  max-width: 90%;
-  padding: 5px 10px;
+  max-width: 900px;
+  padding: 5px 15px;
+  padding-bottom: 60px;
 `;
 
 export const Biography = styled.div`

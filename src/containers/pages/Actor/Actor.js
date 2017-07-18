@@ -3,23 +3,21 @@ import { connect } from 'react-redux';
 import { getActorById, getActorImages } from './actions';
 import { Loader } from 'semantic-ui-react';
 import Hero from './Hero/Hero';
-import Description from './Description';
+import Description from './Description/Description';
 
 class Actor extends React.Component{
   componentWillMount(){
     this.props.getActorById(this.props.match.params.id);
-    this.props.getActorImages(this.props.match.params.id);
   }
   componentDidUpdate(prevProps, prevState) {
     if(prevProps.match.params.id !== this.props.match.params.id){
       this.props.getActorById(this.props.match.params.id);
-      this.props.getActorImages(this.props.match.params.id);
     }
   }
   render(){
-    const { actor, actorImages } = this.props;
+    const { actor } = this.props;
 
-    if(!actor || !actorImages.profiles) {
+    if(!actor) {
       return <Loader size='massive' active inline='centered' />
     }
     return (
@@ -35,12 +33,10 @@ class Actor extends React.Component{
 
 const mapStateToProps = (state) => ({
   actor: state.getActor.actor,
-  actorImages: state.getActor.images
 });
 
 const mapDispatchToProps = (dispatch) => ({
   getActorById: (id) => dispatch(getActorById(id)),
-  getActorImages: (id) => dispatch(getActorImages(id)),
 });
 
 

@@ -13,6 +13,10 @@ export const ActorInfo = styled.div`
   justify-content: center;
   align-items: center;
   align-content: center;
+  @media (max-width: ${tablet}px){
+    padding-top: 60px;
+    width: 100%;
+  }
 `;
 
 export const Name = styled.div`

@@ -13,17 +13,25 @@ const gold = '#E1CB96';
 export const Hero = styled.div`
   position: relative;
   width: 100vw;
-  margin-top: -60px;
-  box-shadow: 0px 50px 100px rgba(0,0,0,0.8);
+  padding: 0 10px;
   display: flex;
   align-items: center;
+  @media (max-width: ${tablet}px){
+    flex-wrap: wrap;
+  }
 `;
 
 export const Actor = styled.div`
-  width: 50vw;
-  height: 100vh;
-  background: url(${props => props.poster});
+  width: 400px;
+  height: 600px;
+  margin: auto;
+  background-image: url(${props => props.poster});
   background-size: cover;
   background-position: 50%;
-  filter: grayscale(1);
+  filter: grayscale(0.5);
+  position: relative;
+  @media (max-width: ${tablet}px){
+    width: 300px;
+    height: 450px
+  }
 `;

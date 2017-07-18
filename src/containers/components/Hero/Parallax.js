@@ -27,7 +27,6 @@ export default ({ movie, large, landing }) => {
       <Parallax
         strength={200}
         bgImage={`https://image.tmdb.org/t/p/w1000${large ? movie.backdrop_path : movie.poster_path}`}
-        blur={ large ? '1' : '0' }
       >
         {
           !large ?
